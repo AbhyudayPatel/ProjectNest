@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    cat2
+    <header class="text-white body-font">
+      <div class="container mx-auto flex flex-wrap md:flex-row items-center">
+        <a
+          class="flex title-font my-3 font-medium items-center text-gray-900 mb-4 md:mb-0"
+        >
+          <span class="ml-3 text-indigo-500 text-3xl">ProjectNest</span>
+        </a>
+        <nav class="md:ml-auto text-xl">
+          <button id="c3" class="classx mr-14 text-black">Home</button>
+          <button id="c1" class="classx mr-14 text-dark">About Us</button>
+          <button
+            class="classx btn-primary mr-14 text-dark"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptions"
+            aria-controls="offcanvasWithBothOptions"
+          >
+            Categories
+          </button>
+
+          <div
+            class="offcanvas offcanvas-start"
+            data-bs-scroll="true"
+            tabindex="-1"
+            id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                Categories
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <a href="cat1.html" class="href1">cat1</a>
+              <a href="cat2.html" class="href2">cat2</a>
+              <a href="cat3.html" class="href3">cat3</a>
+            </div>
+          </div>
+          <button type="button" id="c2" class="btn btn-primary mx-8">
+            Login
+          </button>
+        </nav>
+      </div>
+    </header>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="script.js"></script>
+    <script>
+      document.getElementById("c3").addEventListener("click", function () {
+        window.location.href = "index.html";
+      });
+    </script>
+  </body>
+</html>

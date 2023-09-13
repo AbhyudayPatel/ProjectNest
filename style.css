@@ -1,0 +1,20 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  background-color: #edeff3;
+}
+
+#c2 {
+  background-color: #6366f1;
+  color: white;
+}
+#c2:hover {
+  font-size: 1.2rem;
+}
+
+.classx:hover {
+  font-size: 1.4rem;
+}
