@@ -56,7 +56,7 @@
             <div class="offcanvas-body">
               <a href="cat1.html" class="href1">cat1</a>
               <a href="cat2.html" class="href2">cat2</a>
-              <a href="cat3.html" class="href3">cat3</a> 
+              <a href="cat3.html" class="href3">cat3</a>
             </div>
           </div>
           <button type="button" id="c2" class="btn btn-primary mx-8">
@@ -76,9 +76,9 @@
             </h1>
           </div>
         </div>
-        <div class="flex flex-wrap -m-4">
-          <div class="xl:w-1/4 md:w-1/2 p-4">
-            <div class="bg-gray-100 p-6 rounded-lg">
+        <div class=" flex flex-wrap -m-4">
+          <div id="proj1" class="xl:w-1/4 md:w-1/2 p-4">
+            <div class="recentproj bg-gray-100 p-6 rounded-lg">
               <img
                 class="h-40 rounded w-full object-cover object-center mb-6"
                 src="https://dummyimage.com/720x400"
@@ -99,7 +99,7 @@
             </div>
           </div>
           <div class="xl:w-1/4 md:w-1/2 p-4">
-            <div class="bg-gray-100 p-6 rounded-lg">
+            <div class="recentproj bg-gray-100 p-6 rounded-lg">
               <img
                 class="h-40 rounded w-full object-cover object-center mb-6"
                 src="https://dummyimage.com/721x401"
@@ -120,7 +120,7 @@
             </div>
           </div>
           <div class="xl:w-1/4 md:w-1/2 p-4">
-            <div class="bg-gray-100 p-6 rounded-lg">
+            <div class="recentproj bg-gray-100 p-6 rounded-lg">
               <img
                 class="h-40 rounded w-full object-cover object-center mb-6"
                 src="https://dummyimage.com/722x402"
@@ -141,7 +141,7 @@
             </div>
           </div>
           <div class="xl:w-1/4 md:w-1/2 p-4">
-            <div class="bg-gray-100 p-6 rounded-lg">
+            <div class="recentproj bg-gray-100 p-6 rounded-lg">
               <img
                 class="h-40 rounded w-full object-cover object-center mb-6"
                 src="https://dummyimage.com/723x403"
@@ -358,6 +358,19 @@
     <script>
       document.getElementById("c1").addEventListener("click", function () {
         window.location.href = "about.html";
+      });
+      document.getElementById("c2").addEventListener("click", function () {
+        window.location.href = "login.html";
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get a reference to the clickable div by its ID
+        var Proj1 = document.getElementById("proj1");
+
+        // Add a click event listener to the div
+        Proj1.addEventListener("click", function () {
+          // Navigate to the new page when the div is clicked
+          window.location.href = "proj1.html";
+        });
       });
     </script>
   </body>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+      #list-example {
+        position: fixed;
+        width: 27%;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="text-white body-font">
+      <div class="container mx-auto flex flex-wrap md:flex-row items-center">
+        <a
+          class="flex title-font my-3 font-medium items-center text-gray-900 mb-4 md:mb-0"
+        >
+          <span class="ml-3 text-indigo-500 text-3xl">ProjectNest</span>
+        </a>
+        <nav class="md:ml-auto text-xl">
+          <button id="c3" class="classx mr-14 text-black">Home</button>
+          <button id="c1" class="classx mr-14 text-dark">About Us</button>
+          <button
+            class="classx btn-primary mr-14 text-dark"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptions"
+            aria-controls="offcanvasWithBothOptions"
+          >
+            Categories
+          </button>
+
+          <div
+            class="offcanvas offcanvas-start"
+            data-bs-scroll="true"
+            tabindex="-1"
+            id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                Categories
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <a href="cat1.html" class="href1">cat1</a>
+              <a href="cat2.html" class="href2">cat2</a>
+              <a href="cat3.html" class="href3">cat3</a>
+            </div>
+          </div>
+          <button type="button" id="c2" class="btn btn-primary mx-8">
+            Login
+          </button>
+        </nav>
+      </div>
+    </header>
+    <section>
+      <div class="row mt-7 ml-5 mr-8">
+        <div class="col-4">
+          <div id="list-example" class="list-group">
+            <a
+              class="list-group-item list-group-item-action"
+              href="#list-item-1"
+              >Overview</a
+            >
+            <a
+              class="list-group-item list-group-item-action"
+              href="#list-item-2"
+              >Procedure</a
+            >
+            <a
+              class="list-group-item list-group-item-action"
+              href="#list-item-3"
+              >Code</a
+            >
+            <a
+              class="list-group-item list-group-item-action"
+              href="#list-item-4"
+              >Summary</a
+            >
+          </div>
+        </div>
+        <div class="col-8">
+          <div
+            data-bs-spy="scroll"
+            data-bs-target="#list-example"
+            data-bs-smooth-scroll="true"
+            class="scrollspy-example"
+            tabindex="0"
+          >
+            <h4 id="list-item-1">Overview</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ut
+              quaerat quam repellendus deserunt quas magnam id eius, cupiditate
+              ullam a voluptatum, molestiae cum nihil amet minima tenetur
+              molestias ratione veniam, quibusdam obcaecati temporibus illum!
+              Fugit architecto laboriosam eea consequatur laboriosam! Corporis
+              incidunt nemo tempora nam sapiente ratione commodi deleniti, fuga
+              totam tempore debitis unde magnam dicta asperiores consequuntur
+              iusto recusandae cumque amet pariatur consequatur doloribus. Eos
+              voluptatum id perspiciatis unde quo iure at expedita harum labore
+              ad tenetur nulla est ex deserunt quae repellendus esse, libero
+              praesentium culpa porro odio corporis placeat laudantium? Vel qui
+              quod unde voluptate, velit, dolor expedita accusantium amet
+              recusandae sint ea voluptatibus consequatur a. Illo, error quasi
+              accusantium ab ad expedita perspiciatis natus numquam rem incidunt
+              quod odit aperiam sequi fuga omnis magnam tempore cum harum nam
+              consequuntur voluptates quam. Asperiores sed autem eveniet, quo
+              aliquid optio quas quidem aliquam, iste, dolore doloribus quam
+              maiores natus nostrum distinctio eligendi neque quia excepturi
+              inventore culpa. Repellat porro labore asperiores accusamus neque
+              natus in magnam ea aliquid rerum possimus est labortis,
+              dignissimos aspernatur veniam, soluta iure libero, dolores quia
+              numquam voluptate nihil! Nobis, aperiam. Eligendi alias odio
+              obcaecati porro, soluta repellendus delectus eos excepturi?
+            </p>
+            <h4 id="list-item-2">Procedure</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Assumenda consequatur dolorem quaerat reprehenderit veniam
+              quisquam earum natus. Odit laboriosam delectus harum perspiciatis
+              eligendi fugiat dolorum? Praesentium laboriosam optio minus
+              sapiente iusto similique in laudantium veritatis consectetur quam
+              possimus expedita soluta odio, aperiam ut corrupti recusandae
+              tenetur esse magni? Illo possimus corrupti similique, incidunt
+              sunt magni, dolorem voluptatum dolorum, cupiditate quasi dolor
+              aspernatur earum voluptas voluptatem sed qs voluptatum! Tempore
+              blanditiis sint ratione provident delectus libero placeat
+              reprehenderit sequi nam, fuga dolores repellat beatae neque harum.
+              Magni tempore quibusdam neque, assumenda molestiae optio inventore
+              id repellendus delectus perspiciatis consectetur, sit, minima ab?
+              Sed eius amet totam hic minus sapiente nulla adipisci consectetur,
+              fuga vero voluptatum quos commodi ab qui perferendis
+              necessitatibus ducimus dolores a esse nesciunt illum libero est
+              porro? Nemo, sed.
+            </p>
+            <h4 id="list-item-3">Code</h4>
+            <pre>
+              <code class="language-python">
+                  for i in range(1,5):
+                      print(i)
+              </code>
+            </pre>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+            <link
+              rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css"
+            />
+
+            <h4 id="list-item-4">Summary</h4>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum
+              non mollitia rerum nam corporis provident sequi ex aliquid, eaque
+              tenetur, libero corrupti dolorem asperiores? Laudantium ducimus
+              aliquam reiciendis iusto temporibus explicabo nisi similique
+              repellendus voluptates ex. Similique, obcaecati voluptatibus.
+              Possimus porro fuga laboriosam odit molestias consequatur alias
+              tempora ad mollitia sit natus aut praesentium eos non corrupti
+              libero nihil voluptatem nulla, quam, distinctio quasi quis est
+              laborum. Vel totam ullam, ipsam officiis nulla perspiciatis
+              adipisci accusamus facilis saepe, eligendi excepturi accusantium
+              cupiditate illo. Corrupti ipsa illo eligendi ea nemo, ipsum
+              ratione! Fugit voluptatum nesciunt officia. Impedit nihil
+              voluptate ipsam soluta.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="script.js"></script>
+    <script>
+      document.getElementById("c3").addEventListener("click", function () {
+        window.location.href = "index.html";
+      });
+    </script>
+  </body>
+</html>

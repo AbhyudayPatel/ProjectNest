@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: #f4f4f4;
+      }
+      .container {
+        margin-top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="logincontainer">
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header">
+                <h3>Login</h3></div>
+            <div class="card-body">
+              <form id="loginForm">
+                <div class="form-group">
+                  <label for="username">Username:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="username"
+                    name="username"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="password">Password:</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    name="password"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary btn-block my-3">
+                  Login
+                </button>
+              </form>
+              <hr />
+              <button id="showSignupBtn" class="btn btn-success btn-block">
+                Sign Up
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="signupFormContainer" class="container" style="display: none">
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header"><h3>Sign up</h3></div>
+            <div class="card-body">
+              <form id="signupForm">
+                <div class="form-group">
+                  <label for="newUsername">Username:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="newUsername"
+                    name="newUsername"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="newPassword">Set Password:</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="newPassword"
+                    name="newPassword"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-success btn-block my-3">
+                  Sign Up
+                </button>
+              </form>
+              <hr />
+              <button id="showLoginBtn" class="btn btn-primary btn-block">
+                Back to Login
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Include Bootstrap and jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript to handle form submission -->
+    <script>
+      $(document).ready(function () {
+        // Show the signup form and hide the login form
+        $("#showSignupBtn").click(function () {
+          $("#logincontainer").hide();
+          $("#signupFormContainer").show();
+        });
+
+        // Show the login form and hide the signup form
+        $("#showLoginBtn").click(function () {
+          $("#signupFormContainer").hide();
+          $("#logincontainer").show();
+        });
+
+        // Login form submission
+        $("#loginForm").submit(function (event) {
+          event.preventDefault();
+          const username = $("#username").val();
+          const password = $("#password").val();
+          // Add your login logic here
+          if (username === "yourusername" && password === "yourpassword") {
+            alert("Login successful!");
+          } else {
+            alert("Login failed. Please check your credentials.");
+          }
+        });
+
+        // Signup form submission
+        $("#signupForm").submit(function (event) {
+          event.preventDefault();
+          const newUsername = $("#newUsername").val();
+          const newPassword = $("#newPassword").val();
+          const email = $("#email").val();
+          // Add your signup logic here
+          // For a basic example, you can display a success message
+          alert("Signup successful! You can now log in.");
+        });
+      });
+    </script>
+  </body>
+</html>
