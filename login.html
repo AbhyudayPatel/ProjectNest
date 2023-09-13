@@ -25,7 +25,8 @@
         <div class="col-md-4">
           <div class="card">
             <div class="card-header">
-                <h3>Login</h3></div>
+              <h3>Login</h3>
+            </div>
             <div class="card-body">
               <form id="loginForm">
                 <div class="form-group">
@@ -125,35 +126,42 @@
           $("#logincontainer").hide();
           $("#signupFormContainer").show();
         });
-
-        // Show the login form and hide the signup form
         $("#showLoginBtn").click(function () {
           $("#signupFormContainer").hide();
           $("#logincontainer").show();
         });
-
-        // Login form submission
-        $("#loginForm").submit(function (event) {
-          event.preventDefault();
-          const username = $("#username").val();
-          const password = $("#password").val();
-          // Add your login logic here
-          if (username === "yourusername" && password === "yourpassword") {
-            alert("Login successful!");
-          } else {
-            alert("Login failed. Please check your credentials.");
-          }
-        });
-
-        // Signup form submission
+        var userArray = [];
         $("#signupForm").submit(function (event) {
           event.preventDefault();
           const newUsername = $("#newUsername").val();
           const newPassword = $("#newPassword").val();
           const email = $("#email").val();
-          // Add your signup logic here
-          // For a basic example, you can display a success message
+          var details = {
+            uname: newUsername,
+            pwd: newPassword,
+            eml: email,
+          };
+          userArray.push(details);
           alert("Signup successful! You can now log in.");
+        });
+        $("#loginForm").submit(function (event) {
+          event.preventDefault();
+          const username = $("#username").val();
+          const password = $("#password").val();
+          let usernameToCheck = username;
+          let passwordToCheck = password; 
+          let userExists = false;
+          for (let i = 0; i < userArray.length; i++) {
+            if (userArray[i].uname === usernameToCheck && userArray[i].pwd === passwordToCheck) {
+              userExists = true;
+              break; 
+            }
+          }
+          if (userExists) {
+            alert("Login successful!");
+          } else {
+            alert("Login failed!");
+          }
         });
       });
     </script>
