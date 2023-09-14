@@ -12,10 +12,63 @@
       crossorigin="anonymous"
     />
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
+      rel="stylesheet"
+    />
     <style>
       #list-example {
         position: fixed;
         width: 27%;
+      }
+      #list-item-4 {
+        font-size: 2.5rem;
+        font-family: 'Merriweather', serif;
+        margin: 2rem 18rem;
+        color: #6366f1;
+      }
+      #list-item-5 {
+        font-size: 2.5rem;
+        font-family: 'Merriweather', serif;
+        margin: 2rem 16rem;
+        color: #6366f1;
+      }
+      #list-item-3 {
+        font-size: 2.5rem;
+        font-family: 'Merriweather', serif;
+        margin: 2rem 20rem;
+        color: #6366f1;
+      }
+      #list-item-2 {
+        font-size: 2.5rem;
+        font-family: 'Merriweather', serif;
+        margin: 2rem 18rem;
+        color: #6366f1;
+      }
+      #list-item-1 {
+        font-size: 2.5rem;
+        font-family: 'Merriweather', serif;
+        margin: 0rem 18rem 1rem;
+        color: #6366f1;
+      }
+      p {
+        font-size: larger;
+        font-family: 'Merriweather', serif;
+      }
+      li {
+        font-size: larger;
+        font-family: 'Merriweather', serif;
+      }
+      .containerh {
+        text-align: center;
+        font-family: 'Merriweather', serif;
+        font-size: 4rem;
+        font-weight: 380;
+      }
+      img{
+        margin: 1rem 0rem;
       }
     </style>
   </head>
@@ -59,9 +112,15 @@
               ></button>
             </div>
             <div class="offcanvas-body">
-              <a href="cat1.html" class="href1">cat1</a>
-              <a href="cat2.html" class="href2">cat2</a>
-              <a href="cat3.html" class="href3">cat3</a>
+              <div class="body1">
+                <a href="cat1.html" class="href1">cat1</a>
+              </div>
+              <div class="body2">
+                <a href="cat2.html" class="href2">cat2</a>
+              </div>
+              <div class="body3">
+                <a href="cat3.html" class="href3">cat3</a>
+              </div>
             </div>
           </div>
           <button type="button" id="c2" class="btn btn-primary mx-8">
@@ -70,6 +129,8 @@
         </nav>
       </div>
     </header>
+    <div class="containerh">Ultrasonic Security System</div>
+
     <section>
       <div class="row mt-7 ml-5 mr-8">
         <div class="col-4">
@@ -94,6 +155,11 @@
               href="#list-item-4"
               >Summary</a
             >
+            <a
+              class="list-group-item list-group-item-action"
+              href="#list-item-5"
+              >Contributors</a
+            >
           </div>
         </div>
         <div class="col-8">
@@ -104,32 +170,15 @@
             class="scrollspy-example"
             tabindex="0"
           >
-            <h4 id="list-item-1">Overview</h4>
+            <h4 id="list-item-1"></h4>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ut
-              quaerat quam repellendus deserunt quas magnam id eius, cupiditate
-              ullam a voluptatum, molestiae cum nihil amet minima tenetur
-              molestias ratione veniam, quibusdam obcaecati temporibus illum!
-              Fugit architecto laboriosam eea consequatur laboriosam! Corporis
-              incidunt nemo tempora nam sapiente ratione commodi deleniti, fuga
-              totam tempore debitis unde magnam dicta asperiores consequuntur
-              iusto recusandae cumque amet pariatur consequatur doloribus. Eos
-              voluptatum id perspiciatis unde quo iure at expedita harum labore
-              ad tenetur nulla est ex deserunt quae repellendus esse, libero
-              praesentium culpa porro odio corporis placeat laudantium? Vel qui
-              quod unde voluptate, velit, dolor expedita accusantium amet
-              recusandae sint ea voluptatibus consequatur a. Illo, error quasi
-              accusantium ab ad expedita perspiciatis natus numquam rem incidunt
-              quod odit aperiam sequi fuga omnis magnam tempore cum harum nam
-              consequuntur voluptates quam. Asperiores sed autem eveniet, quo
-              aliquid optio quas quidem aliquam, iste, dolore doloribus quam
-              maiores natus nostrum distinctio eligendi neque quia excepturi
-              inventore culpa. Repellat porro labore asperiores accusamus neque
-              natus in magnam ea aliquid rerum possimus est labortis,
-              dignissimos aspernatur veniam, soluta iure libero, dolores quia
-              numquam voluptate nihil! Nobis, aperiam. Eligendi alias odio
-              obcaecati porro, soluta repellendus delectus eos excepturi?
+              It is a simple tutorial on how to create little a security device
+              using an Arduino. The device will detect the presence of an
+              intruder and alert you by sending a message to your device. The
+              device will also sound an alarm and turn on a red LED to alert you
+              of the intruder.
             </p>
+            <img src="./proj1img.jpg" alt="img">
             <h4 id="list-item-2">Procedure</h4>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -152,9 +201,68 @@
             </p>
             <h4 id="list-item-3">Code</h4>
             <pre>
-              <code class="language-python">
-                  for i in range(1,5):
-                      print(i)
+              <code class="language-c">
+                #define trigPin 2
+                #define echoPin 3
+                #define LEDlampRed 4
+                #define  LEDlampYellow 5
+                #define LEDlampGreen 6 
+                #define soundbuzzer 7
+                int sound  = 500;
+                
+                
+                void setup() {
+                  Serial.begin (9600);
+                  pinMode(trigPin,  OUTPUT);
+                  pinMode(echoPin, INPUT);
+                  pinMode(LEDlampRed, OUTPUT);
+                  pinMode(LEDlampYellow,  OUTPUT);
+                  pinMode(LEDlampGreen, OUTPUT);
+                  pinMode(soundbuzzer, OUTPUT);
+                }
+                void  loop() {
+                  long durationindigit, distanceincm;
+                  digitalWrite(trigPin, LOW);  
+                  delayMicroseconds(2);
+                  digitalWrite(trigPin, HIGH);
+                  delayMicroseconds(10);
+                  digitalWrite(trigPin, LOW);
+                  durationindigit = pulseIn(echoPin, HIGH);
+                  distanceincm = (durationindigit/5) / 29.1;
+                 
+                  if (distanceincm < 50) {
+                      digitalWrite(LEDlampGreen, HIGH);
+                }
+                  else {
+                      digitalWrite(LEDlampGreen,  LOW);
+                  }
+                  
+                  if (distance < 20) {
+                    digitalWrite(LEDlampYellow,  HIGH);
+                }
+                  else {
+                    digitalWrite(LEDlampYellow,LOW);
+                  }
+                  if (distance  < 5) {
+                    digitalWrite(LEDlampRed, HIGH);
+                    sound = 1000;
+                }
+                  else  {
+                    digitalWrite(LEDlampRed,LOW);
+                  }
+                 
+                  if (distanceincm > 5 ||  distanceinsm <= 0){
+                    Serial.println("Outside the permissible range of distances");
+                    noTone(soundbuzzer);
+                  }
+                  else {
+                    Serial.print(distance);
+                    Serial.println("  cm");
+                    tone(buzzer, sound);
+                  }
+                  
+                  delay(300);
+                }
               </code>
             </pre>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
@@ -163,7 +271,7 @@
               href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css"
             />
 
-            <h4 id="list-item-4">Summary</h4>
+            <h2 id="list-item-4">Summary</h2>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum
               non mollitia rerum nam corporis provident sequi ex aliquid, eaque
@@ -179,10 +287,39 @@
               ratione! Fugit voluptatum nesciunt officia. Impedit nihil
               voluptate ipsam soluta.
             </p>
+            <h2 id="list-item-5">Contributors</h2>
+            <ul>
+              <li>Rohan Kumar , B.Sc , (DELHI UNIVERSITY)</li>
+              <li>Suchita Rathore , B.Sc , (DELHI UNIVERSITY)</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
+    <footer class="text-gray-600 body-font">
+      <div
+        class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col"
+      >
+        <div
+          class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left"
+        >
+          <a
+            class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
+          >
+          </a>
+        </div>
+        <div
+          class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center"
+        ></div>
+      </div>
+      <div class="bg-gray-100">
+        <div
+          class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row"
+        >
+          <span class="ml-3 text-indigo-500 text-xl">&copy ProjectNest 2023</span>
+        </div>
+      </div>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"

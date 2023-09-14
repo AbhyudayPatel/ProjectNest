@@ -120,6 +120,7 @@
 
     <!-- JavaScript to handle form submission -->
     <script>
+      const userArray = [];
       $(document).ready(function () {
         // Show the signup form and hide the login form
         $("#showSignupBtn").click(function () {
@@ -130,18 +131,20 @@
           $("#signupFormContainer").hide();
           $("#logincontainer").show();
         });
-        var userArray = [];
+        
+
         $("#signupForm").submit(function (event) {
           event.preventDefault();
           const newUsername = $("#newUsername").val();
           const newPassword = $("#newPassword").val();
           const email = $("#email").val();
-          var details = {
+          const details = {
             uname: newUsername,
-            pwd: newPassword,
             eml: email,
+            pwd: newPassword,
           };
           userArray.push(details);
+
           alert("Signup successful! You can now log in.");
         });
         $("#loginForm").submit(function (event) {
@@ -149,12 +152,15 @@
           const username = $("#username").val();
           const password = $("#password").val();
           let usernameToCheck = username;
-          let passwordToCheck = password; 
+          let passwordToCheck = password;
           let userExists = false;
           for (let i = 0; i < userArray.length; i++) {
-            if (userArray[i].uname === usernameToCheck && userArray[i].pwd === passwordToCheck) {
+            if (
+              userArray[i].uname === usernameToCheck &&
+              userArray[i].pwd === passwordToCheck
+            ) {
               userExists = true;
-              break; 
+              break;
             }
           }
           if (userExists) {
@@ -164,6 +170,7 @@
           }
         });
       });
+      module.exports = userArray;
     </script>
   </body>
 </html>

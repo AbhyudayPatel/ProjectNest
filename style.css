@@ -21,3 +21,7 @@ header {
 .recentproj{
   cursor: pointer;
 }
+.offcanvas-title{
+  font-size: 2rem;
+  margin: auto;
+}
