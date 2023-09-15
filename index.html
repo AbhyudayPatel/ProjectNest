@@ -23,7 +23,7 @@
           <span class="ml-3 text-indigo-500 text-3xl">ProjectNest</span>
         </a>
         <nav class="md:ml-auto text-xl">
-          <button class="classx mr-14 text-black">Home</button>
+          <button id="c3" class="classx mr-14 text-black">Home</button>
           <button id="c1" class="classx mr-14 text-dark">About Us</button>
           <button
             class="classx btn-primary mr-14 text-dark"
@@ -91,7 +91,7 @@
                   <a
                     href="cat6.html"
                     class="list-group-item list-group-item-action"
-                    >Others</a
+                    >Research</a
                   >
                 </div>
               </div>
@@ -207,127 +207,24 @@
               </h2>
             </div>
           </div>
-          <div id="proj2" class="xl:w-1/4 md:w-1/2 p-4">
+          <div id="proj6" class="xl:w-1/4 md:w-1/2 p-4">
             <div class="recentproj bg-gray-100 p-6 rounded-lg">
               <img
                 class="h-40 rounded w-full object-cover object-center mb-6"
-                src="proj2img.jpg"
+                src="img/proj6.blob"
                 alt="content"
               />
               <h3
                 class="tracking-widest text-indigo-500 text-xs font-medium title-font"
               >
-                IIIT BANGALORE
+                IIIT UNA
               </h3>
               <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
-                Employee Management System
-              </h2>
-            </div>
-          </div>
-          <div id="proj3" class="xl:w-1/4 md:w-1/2 p-4">
-            <div class="recentproj bg-gray-100 p-6 rounded-lg">
-              <img
-                class="h-40 rounded w-full object-cover object-center mb-6"
-                src="proj3.png"
-                alt="content"
-              />
-              <h3
-                class="tracking-widest text-indigo-500 text-xs font-medium title-font"
-              >
-                AIIMS DELHI
-              </h3>
-              <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
-                Patient Risk Identification
-              </h2>
-            </div>
-          </div>
-          <div id="proj4" class="xl:w-1/4 md:w-1/2 p-4">
-            <div class="recentproj bg-gray-100 p-6 rounded-lg">
-              <img
-                class="h-40 rounded w-full object-cover object-center mb-6"
-                src="proj4img.webp"
-                alt="content"
-              />
-              <h3
-                class="tracking-widest text-indigo-500 text-xs font-medium title-font"
-              >
-                CMC VELLORE
-              </h3>
-              <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
-                Neuroanatomical Analysis
+                Bluetooth Controlled Car
               </h2>
             </div>
           </div>
         </div>
-        <div class="flex flex-wrap -m-4 my-5">
-          <div id="proj1" class="xl:w-1/4 md:w-1/2 p-4">
-            <div class="recentproj bg-gray-100 p-6 rounded-lg">
-              <img
-                class="h-40 rounded w-full object-cover object-center mb-6"
-                src="proj1img.jpg"
-                alt="content"
-              />
-              <h3
-                class="tracking-widest text-indigo-500 text-xs font-medium title-font"
-              >
-                DELHI UNIVERSITY
-              </h3>
-              <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
-                Ultrasonic Security System
-              </h2>
-            </div>
-          </div>
-          <div id="proj2" class="xl:w-1/4 md:w-1/2 p-4">
-            <div class="recentproj bg-gray-100 p-6 rounded-lg">
-              <img
-                class="h-40 rounded w-full object-cover object-center mb-6"
-                src="proj2img.jpg"
-                alt="content"
-              />
-              <h3
-                class="tracking-widest text-indigo-500 text-xs font-medium title-font"
-              >
-                IIIT BANGALORE
-              </h3>
-              <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
-                Employee Management System
-              </h2>
-            </div>
-          </div>
-          <div id="proj3" class="xl:w-1/4 md:w-1/2 p-4">
-            <div class="recentproj bg-gray-100 p-6 rounded-lg">
-              <img
-                class="h-40 rounded w-full object-cover object-center mb-6"
-                src="proj3.png"
-                alt="content"
-              />
-              <h3
-                class="tracking-widest text-indigo-500 text-xs font-medium title-font"
-              >
-                AIIMS DELHI
-              </h3>
-              <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
-                Patient Risk Identification
-              </h2>
-            </div>
-          </div>
-          <div id="proj4" class="xl:w-1/4 md:w-1/2 p-4">
-            <div class="recentproj bg-gray-100 p-6 rounded-lg">
-              <img
-                class="h-40 rounded w-full object-cover object-center mb-6"
-                src="proj4img.webp"
-                alt="content"
-              />
-              <h3
-                class="tracking-widest text-indigo-500 text-xs font-medium title-font"
-              >
-                CMC VELLORE
-              </h3>
-              <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
-                Neuroanatomical Analysis
-              </h2>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -365,6 +262,9 @@
 
     <script src="script.js"></script>
     <script>
+      document.getElementById("c3").addEventListener("click", function () {
+        window.location.href = "index.html";
+      });
       document.getElementById("c1").addEventListener("click", function () {
         window.location.href = "about.html";
       });
@@ -377,6 +277,7 @@
         var Proj3 = document.getElementById("proj3");
         var Proj4 = document.getElementById("proj4");
         var Proj5 = document.getElementById("proj5");
+        var Proj6 = document.getElementById("proj6");
         Proj1.addEventListener("click", function () {
           window.location.href = "proj1.html";
         });
@@ -391,6 +292,9 @@
         });
         Proj5.addEventListener("click", function () {
           window.location.href = "proj5.html";
+        });
+        Proj6.addEventListener("click", function () {
+          window.location.href = "proj6.html";
         });
       });
     </script>

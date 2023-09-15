@@ -58,14 +58,14 @@
                 <div class="list-group">
                   <a
                     href="index.html"
-                    class="list-group-item list-group-item-action"
+                    class="list-group-item list-group-item-action active"
+                    aria-current="true"
                   >
                     Recent Projects
                   </a>
                   <a
                     href="cat1.html"
-                    class="list-group-item list-group-item-action active"
-                    aria-current="true"
+                    class="list-group-item list-group-item-action"
                     >Robotics</a
                   >
                   <a
@@ -110,42 +110,27 @@
             <h1
               class="sm:text-3xl text-2xl flex justify-center font-medium title-font mb-2"
             >
-              Robotics
+              Research
             </h1>
           </div>
         </div>
         <div class="flex flex-wrap -m-4">
-          <div id="proj1" class="xl:w-1/4 md:w-1/2 p-4">
+        </div>
+        <div class="flex flex-wrap -m-4 my-5">
+          <div id="proj5" class="xl:w-1/4 md:w-1/2 p-4">
             <div class="recentproj bg-gray-100 p-6 rounded-lg">
               <img
                 class="h-40 rounded w-full object-cover object-center mb-6"
-                src="img/proj1img.jpg"
+                src="img/proj5img.jpg"
                 alt="content"
               />
               <h3
                 class="tracking-widest text-indigo-500 text-xs font-medium title-font"
               >
-                DELHI UNIVERSITY
+                IIT PATNA
               </h3>
               <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
-                Ultrasonic Security System
-              </h2>
-            </div>
-          </div>
-          <div id="proj6" class="xl:w-1/4 md:w-1/2 p-4">
-            <div class="recentproj bg-gray-100 p-6 rounded-lg">
-              <img
-                class="h-40 rounded w-full object-cover object-center mb-6"
-                src="img/proj6.blob"
-                alt="content"
-              />
-              <h3
-                class="tracking-widest text-indigo-500 text-xs font-medium title-font"
-              >
-                IIIT UNA
-              </h3>
-              <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
-                Bluetooth Controlled Car
+                Algorithmic Ghost in Research Shell
               </h2>
             </div>
           </div>
@@ -197,14 +182,11 @@
         window.location.href = "login.html";
       });
       document.addEventListener("DOMContentLoaded", function () {
-        var Proj1 = document.getElementById("proj1");
-        var Proj6 = document.getElementById("proj6");
-        Proj1.addEventListener("click", function () {
-          window.location.href = "proj1.html";
+        var Proj5 = document.getElementById("proj5");
+        Proj5.addEventListener("click", function () {
+          window.location.href = "proj5.html";
         });
-        Proj6.addEventListener("click", function () {
-          window.location.href = "proj6.html";
-        });
+        
       });
     </script>
   </body>
