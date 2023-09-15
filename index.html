@@ -80,7 +80,12 @@
         <div class="flex flex-wrap justify-center w-full mb-8">
           <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
             <h1
-              class="sm:text-3xl text-2xl flex justify-center font-medium title-font mb-2 text-gray-900"
+              class="sm:text-3xl text-2xl flex justify-center font-large title-font mb-9 text-gray-900"
+            >
+            Centralised Integrated Project Repository
+            </h1>
+            <h1
+              class="sm:text-3xl text-2xl flex justify-center font-medium title-font mb-2 text-#6366f1"
             >
               Recent Projects
             </h1>
@@ -104,7 +109,7 @@
               </h2>
             </div>
           </div>
-          <div class="xl:w-1/4 md:w-1/2 p-4">
+          <div id="proj2" class="xl:w-1/4 md:w-1/2 p-4">
             <div class="recentproj bg-gray-100 p-6 rounded-lg">
               <img
                 class="h-40 rounded w-full object-cover object-center mb-6"
@@ -121,20 +126,20 @@
               </h2>
             </div>
           </div>
-          <div class="xl:w-1/4 md:w-1/2 p-4">
+          <div id="proj3" class="xl:w-1/4 md:w-1/2 p-4">
             <div class="recentproj bg-gray-100 p-6 rounded-lg">
               <img
                 class="h-40 rounded w-full object-cover object-center mb-6"
-                src="https://dummyimage.com/722x402"
+                src="proj3.png"
                 alt="content"
               />
               <h3
                 class="tracking-widest text-indigo-500 text-xs font-medium title-font"
               >
-                SUBTITLE
+                AIIMS DELHI
               </h3>
               <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
-                Great Pyramid of Giza
+                Patient Risk Identification
               </h2>
             </div>
           </div>
@@ -197,13 +202,21 @@
         window.location.href = "login.html";
       });
       document.addEventListener("DOMContentLoaded", function () {
-        // Get a reference to the clickable div by its ID
         var Proj1 = document.getElementById("proj1");
-
-        // Add a click event listener to the div
+        var Proj2 = document.getElementById("proj2");
+        var Proj3 = document.getElementById("proj3");
+        var Proj4 = document.getElementById("proj4");
         Proj1.addEventListener("click", function () {
-          // Navigate to the new page when the div is clicked
           window.location.href = "proj1.html";
+        });
+        Proj2.addEventListener("click", function () {
+          window.location.href = "proj2.html";
+        });
+        Proj3.addEventListener("click", function () {
+          window.location.href = "proj3.html";
+        });
+        Proj4.addEventListener("click", function () {
+          window.location.href = "proj4.html";
         });
       });
     </script>

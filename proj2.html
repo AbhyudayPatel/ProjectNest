@@ -50,7 +50,7 @@
       #list-item-6 {
         font-size: 2.5rem;
         font-family: "Merriweather", serif;
-        margin: 2rem 18rem;
+        margin: 2rem 16rem;
         color: #6366f1;
       }
       #list-item-1 {
@@ -139,7 +139,7 @@
         </nav>
       </div>
     </header>
-    <div class="containerh">Ultrasonic Security System</div>
+    <div class="containerh">Employee Management System</div>
 
     <section>
       <div class="row mt-7 ml-5 mr-8">
@@ -153,13 +153,9 @@
             <a
               class="list-group-item list-group-item-action"
               href="#list-item-6"
-              >Components</a
+              >Tech Stack</a
             >
-            <a
-              class="list-group-item list-group-item-action"
-              href="#list-item-2"
-              >Procedure</a
-            >
+            
             <a
               class="list-group-item list-group-item-action"
               href="#list-item-3"
@@ -187,112 +183,89 @@
           >
             <h4 id="list-item-1"></h4>
             <p>
-              It is a simple tutorial on how to create little a security device
-              using an Arduino. The device will detect the presence of an
-              intruder and alert you by sending a message to your device. The
-              device will also sound an alarm and turn on a red LED to alert you
-              of the intruder.
+                An Employee Management System (EMS) is a software application designed to efficiently handle various aspects of workforce management within an organization. Typically, an EMS enables businesses to streamline tasks related to employee information, including their personal details, work history, roles, and salaries.
             </p>
-            <img src="proj1img.jpg" alt="img" />
-            <h4 id="list-item-6">Components</h4>
+            <img src="proj2img.jpg" alt="img" />
+            <h4 id="list-item-6">Tech Stack</h4>
 
-            <li>Jumper Wires</li>
-            <li>Arduino UNO</li>
-            <li>LED (generic)</li>
-            <li>Resistor 221 ohm</li>
-            <li>Breadboard (generic)</li>
-            <li>Buzzer</li>
-            <li>Ultrasonic Sensor - HC-SR04</li>
+            <li>Python</li>
+            <li>MY SQL</li>
+            <li>HTML</li>
+            <li>TAILWIND CSS</li>
+            <li>REACT JS</li>
+            <li>NODE JS</li>
 
-            <h4 id="list-item-2">Procedure</h4>
-            <p>
-              <b>Setting up the Hardware:</b>
-              <li>
-                Connect the VCC pin of the ultrasonic sensor to the 5V pin on
-                the Arduino.
-              </li>
-              <li>
-                Connect the GND (ground) pin of the ultrasonic sensor to the GND
-                pin on the Arduino.
-              </li>
-              <li>
-                Connect the Trig pin of the sensor to a digital pin on the
-                Arduino (e.g., Pin 7).
-              </li>
-              <li>
-                Connect the Echo pin of the sensor to another digital pin on the
-                Arduino (e.g., Pin 8).
-              </li>
-              <li>
-                Connect a buzzer to a digital pin (e.g., Pin 9) and a GND pin on
-                the Arduino. Connect an LED (optional) with a current-limiting
-                resistor to another digital pin (e.g., Pin 10) and a GND pin.
-              </li>
-            </p>
+            
             <h4 id="list-item-3">Code</h4>
             <pre>
               <code class="language-c">
-                #define trigPin 2
-                #define echoPin 3
-                #define LEDlampRed 4
-                #define  LEDlampYellow 5
-                #define LEDlampGreen 6 
-                #define soundbuzzer 7
-                int sound  = 500;
-                
-                
-                void setup() {
-                  Serial.begin (9600);
-                  pinMode(trigPin,  OUTPUT);
-                  pinMode(echoPin, INPUT);
-                  pinMode(LEDlampRed, OUTPUT);
-                  pinMode(LEDlampYellow,  OUTPUT);
-                  pinMode(LEDlampGreen, OUTPUT);
-                  pinMode(soundbuzzer, OUTPUT);
-                }
-                void  loop() {
-                  long durationindigit, distanceincm;
-                  digitalWrite(trigPin, LOW);  
-                  delayMicroseconds(2);
-                  digitalWrite(trigPin, HIGH);
-                  delayMicroseconds(10);
-                  digitalWrite(trigPin, LOW);
-                  durationindigit = pulseIn(echoPin, HIGH);
-                  distanceincm = (durationindigit/5) / 29.1;
-                 
-                  if (distanceincm < 50) {
-                      digitalWrite(LEDlampGreen, HIGH);
-                }
-                  else {
-                      digitalWrite(LEDlampGreen,  LOW);
-                  }
-                  
-                  if (distance < 20) {
-                    digitalWrite(LEDlampYellow,  HIGH);
-                }
-                  else {
-                    digitalWrite(LEDlampYellow,LOW);
-                  }
-                  if (distance  < 5) {
-                    digitalWrite(LEDlampRed, HIGH);
-                    sound = 1000;
-                }
-                  else  {
-                    digitalWrite(LEDlampRed,LOW);
-                  }
-                 
-                  if (distanceincm > 5 ||  distanceinsm <= 0){
-                    Serial.println("Outside the permissible range of distances");
-                    noTone(soundbuzzer);
-                  }
-                  else {
-                    Serial.print(distance);
-                    Serial.println("  cm");
-                    tone(buzzer, sound);
-                  }
-                  
-                  delay(300);
-                }
+class Employee:
+    def __init__(self, emp_id, emp_name, emp_salary):
+        self.emp_id = emp_id
+        self.emp_name = emp_name
+        self.emp_salary = emp_salary
+
+class EmployeeManagementSystem:
+    def __init__(self):
+        self.employees = []
+
+    def add_employee(self, emp_id, emp_name, emp_salary):
+        employee = Employee(emp_id, emp_name, emp_salary)
+        self.employees.append(employee)
+        print(f"Employee {emp_name} added successfully.")
+
+    def remove_employee(self, emp_id):
+        for employee in self.employees:
+            if employee.emp_id == emp_id:
+                self.employees.remove(employee)
+                print(f"Employee {employee.emp_name} removed successfully.")
+                return
+        print(f"Employee with ID {emp_id} not found.")
+
+    def display_employees(self):
+        if not self.employees:
+            print("No employees in the system.")
+            return
+
+        print("Employee List:")
+        for employee in self.employees:
+            print(f"ID: {employee.emp_id}, Name: {employee.emp_name}, Salary: {employee.emp_salary}")
+
+def main():
+    emp_sys = EmployeeManagementSystem()
+
+    while True:
+        print("\nEmployee Management System Menu:")
+        print("1. Add Employee")
+        print("2. Remove Employee")
+        print("3. Display Employees")
+        print("4. Exit")
+
+        choice = input("Enter your choice: ")
+
+        if choice == "1":
+            emp_id = input("Enter Employee ID: ")
+            emp_name = input("Enter Employee Name: ")
+            emp_salary = input("Enter Employee Salary: ")
+            emp_sys.add_employee(emp_id, emp_name, emp_salary)
+
+        elif choice == "2":
+            emp_id = input("Enter Employee ID to remove: ")
+            emp_sys.remove_employee(emp_id)
+
+        elif choice == "3":
+            emp_sys.display_employees()
+
+        elif choice == "4":
+            print("Exiting Employee Management System.")
+            break
+
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
+
               </code>
             </pre>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
@@ -303,29 +276,12 @@
 
             <h2 id="list-item-4">Summary</h2>
             <p>
-              The Ultrasonic Security System using Arduino is a DIY project that
-              utilizes common components and an Arduino microcontroller to
-              create a straightforward security setup. By interfacing an
-              ultrasonic sensor, buzzer, and LED(s) with the Arduino, the system
-              can detect motion within a specified range. When an object or
-              person approaches within this range, the system triggers an alarm
-              in the form of a buzzer sound and illuminated LEDs. The Arduino
-              sketch, uploaded to the board, facilitates this functionality by
-              processing sensor data and controlling the alerts. After setting
-              up the hardware and testing the system's performance, it can be
-              mounted in a strategic location for real-world use. Customization
-              options, such as adding a keypad for arming/disarming or
-              incorporating remote monitoring through Wi-Fi connectivity,
-              provide flexibility for tailoring the system to specific security
-              needs. Overall, the Ultrasonic Security System is a cost-effective
-              and expandable solution for basic security applications. Careful
-              attention to safety precautions is essential when working with
-              electronic components.
+                An Employee Management System (EMS) is a software solution designed to streamline and automate various HR and employee-related tasks within an organization. It serves as a central hub for managing employee data, including personal information, job details, payroll, attendance, and performance records. EMS offers tools for HR professionals and managers to efficiently recruit, onboard, and track employee progress. It can also generate reports, facilitate communication between employees and management, and ensure compliance with labor laws and company policies. In essence, an EMS enhances organizational efficiency by providing a comprehensive platform for managing the entire employee lifecycle, from recruitment to retirement.
             </p>
             <h2 id="list-item-5">Contributors</h2>
 
-            <li>Rohan Kumar , B.Sc , (DELHI UNIVERSITY)</li>
-            <li>Suchita Rathore , B.Sc , (DELHI UNIVERSITY)</li>
+            <li>Rohan Kumar , B.Tech , (IIIT BANGALORE)</li>
+            <li>Suchita Rathore , B.Tech , (IIIT BANGALORE)</li>
           </div>
         </div>
       </div>
