@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+      #list-example {
+        position: fixed;
+        width: 27%;
+      }
+      #list-item-4 {
+        font-size: 2.5rem;
+
+        margin: 2rem 18rem;
+        color: #6366f1;
+      }
+      #list-item-5 {
+        font-size: 2.5rem;
+
+        margin: 2rem 16rem;
+        color: #6366f1;
+      }
+      #list-item-3 {
+        font-size: 2.5rem;
+
+        margin: 2rem 20rem;
+        color: #6366f1;
+      }
+      #list-item-2 {
+        font-size: 2.5rem;
+
+        margin: 2rem 18rem;
+        color: #6366f1;
+      }
+      #list-item-6 {
+        font-size: 2.5rem;
+
+        margin: 2rem 18rem;
+        color: #6366f1;
+      }
+      #list-item-1 {
+        font-size: 2.5rem;
+
+        margin: 0rem 18rem 1rem;
+        color: #6366f1;
+      }
+      p {
+        font-size: larger;
+      }
+      li {
+        font-size: larger;
+      }
+      .containerh {
+        text-align: center;
+
+        font-size: 4rem;
+        font-weight: 380;
+      }
+      img {
+        margin: 1rem 0rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="text-white body-font">
+      <div class="container mx-auto flex flex-wrap md:flex-row items-center">
+        <a
+          class="flex title-font my-3 font-medium items-center text-gray-900 mb-4 md:mb-0"
+        >
+          <span class="ml-3 text-indigo-500 text-3xl">ProjectNest</span>
+        </a>
+        <nav class="md:ml-auto text-xl">
+          <button id="c3" class="classx mr-14 text-black">Home</button>
+          <button id="c1" class="classx mr-14 text-dark">About Us</button>
+          <button
+            class="classx btn-primary mr-14 text-dark"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptions"
+            aria-controls="offcanvasWithBothOptions"
+          >
+            Categories
+          </button>
+
+          <div
+            class="offcanvas offcanvas-start"
+            data-bs-scroll="true"
+            tabindex="-1"
+            id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                Categories
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <div class="body1">
+                <div class="list-group">
+                  <a
+                    href="index.html"
+                    class="list-group-item list-group-item-action active"
+                    aria-current="true"
+                  >
+                    Recent Projects
+                  </a>
+                  <a
+                    href="cat1.html"
+                    class="list-group-item list-group-item-action"
+                    >Robotics</a
+                  >
+                  <a
+                    href="cat2.html"
+                    class="list-group-item list-group-item-action"
+                    >Software</a
+                  >
+                  <a
+                    href="cat3.html"
+                    class="list-group-item list-group-item-action"
+                    >Medical</a
+                  >
+                  <a
+                    href="cat4.html"
+                    class="list-group-item list-group-item-action"
+                    >IoT</a
+                  >
+                  <a
+                    href="cat5.html"
+                    class="list-group-item list-group-item-action"
+                    >Chemistry</a
+                  >
+                  <a
+                    href="cat6.html"
+                    class="list-group-item list-group-item-action"
+                    >Others</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button" id="c2" class="btn btn-primary mx-8">
+            Login
+          </button>
+        </nav>
+      </div>
+    </header>
+    <div class="containerh mb-4">Algorithmic Ghost in Research Shell</div>
+
+    <section>
+      <div class="row mt-7 ml-5 mr-8">
+        <div class="col-4">
+          <div id="list-example" class="list-group">
+            <a
+              class="list-group-item list-group-item-action"
+              href="#list-item-1"
+              >Overview</a
+            >
+            <a
+              class="list-group-item list-group-item-action"
+              href="#list-item-2"
+              >Procedure</a
+            >
+            <a
+              class="list-group-item list-group-item-action"
+              href="#list-item-3"
+              >code</a
+            >
+            <a
+              class="list-group-item list-group-item-action"
+              href="#list-item-4"
+              >Summary</a
+            >
+            <a
+              class="list-group-item list-group-item-action"
+              href="#list-item-5"
+              >Contributors</a
+            >
+          </div>
+        </div>
+        <div class="col-8">
+          <div
+            data-bs-spy="scroll"
+            data-bs-target="#list-example"
+            data-bs-smooth-scroll="true"
+            class="scrollspy-example"
+            tabindex="0"
+          >
+            <h4 id="list-item-1"></h4>
+            <embed src="proj5.pdf" class="mb-14" width="800" height="1000" type="application/pdf">
+
+            <p>
+              Identifying patient risk in healthcare is a critical aspect of
+              providing high-quality care and improving patient outcomes. A
+              patient risk identification project typically involves the
+              systematic assessment of patients to determine their level of risk
+              for various health-related issues.
+            </p>
+
+            <h4 id="list-item-2">Procedure</h4>
+
+            <p>1. Define Project Goals and Objectives:</p>
+            <p>
+              Clearly define the objectives of the project. What specific risks
+              are you trying to identify (e.g., disease risk, falls risk,
+              readmission risk)?
+            </p>
+            <p>
+              Determine the scope of the project (e.g., a specific patient
+              population, a particular clinical condition).
+            </p>
+
+            <p>2. Assemble a Multidisciplinary Team:</p>
+            <p>
+              Form a team of healthcare professionals, including physicians,
+              nurses, data analysts, and IT specialists.
+            </p>
+            <p>
+              Ensure representation from various departments and specialties to
+              gain a comprehensive perspective.
+            </p>
+
+            <!-- Repeat the above structure for each step -->
+
+            <p>3 Evaluate Project Success:</p>
+            <p>
+              Assess the project's success by measuring outcomes such as reduced
+              hospital readmissions, improved patient satisfaction, and better
+              health outcomes.
+            </p>
+
+            <p>4 Iterate and Improve:</p>
+            <p>
+              Continuously refine the project based on feedback, new research,
+              and emerging best practices.
+            </p>
+
+            <h4 id="list-item-3">Code</h4>
+            <pre>
+              <code class="language-c">
+                #define trigPin 2
+                #define echoPin 3
+                #define LEDlampRed 4
+                #define  LEDlampYellow 5
+                #define LEDlampGreen 6 
+                #define soundbuzzer 7
+                int sound  = 500;
+                
+                
+                void setup() {
+                  Serial.begin (9600);
+                  pinMode(trigPin,  OUTPUT);
+                  pinMode(echoPin, INPUT);
+                  pinMode(LEDlampRed, OUTPUT);
+                  pinMode(LEDlampYellow,  OUTPUT);
+                  pinMode(LEDlampGreen, OUTPUT);
+                  pinMode(soundbuzzer, OUTPUT);
+                }
+                void  loop() {
+                  long durationindigit, distanceincm;
+                  digitalWrite(trigPin, LOW);  
+                  delayMicroseconds(2);
+                  digitalWrite(trigPin, HIGH);
+                  delayMicroseconds(10);
+                  digitalWrite(trigPin, LOW);
+                  durationindigit = pulseIn(echoPin, HIGH);
+                  distanceincm = (durationindigit/5) / 29.1;
+                 
+                  if (distanceincm < 50) {
+                      digitalWrite(LEDlampGreen, HIGH);
+                }
+                  else {
+                      digitalWrite(LEDlampGreen,  LOW);
+                  }
+                  
+                  if (distance < 20) {
+                    digitalWrite(LEDlampYellow,  HIGH);
+                }
+                  else {
+                    digitalWrite(LEDlampYellow,LOW);
+                  }
+                  if (distance  < 5) {
+                    digitalWrite(LEDlampRed, HIGH);
+                    sound = 1000;
+                }
+                  else  {
+                    digitalWrite(LEDlampRed,LOW);
+                  }
+                 
+                  if (distanceincm > 5 ||  distanceinsm <= 0){
+                    Serial.println("Outside the permissible range of distances");
+                    noTone(soundbuzzer);
+                  }
+                  else {
+                    Serial.print(distance);
+                    Serial.println("  cm");
+                    tone(buzzer, sound);
+                  }
+                  
+                  delay(300);
+                }
+              </code>
+            </pre>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+            <link
+              rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css"
+            />
+
+            <h2 id="list-item-4">Summary</h2>
+            <p>
+              Patient risk identification is a vital element in healthcare,
+              crucial for ensuring high-quality care and positive patient
+              outcomes. This process involves systematically assessing patients
+              to gauge their vulnerability to various health-related issues. By
+              accurately identifying these risks, healthcare providers can
+              develop tailored treatment plans, allocate resources effectively,
+              and implement preventive measures. This proactive approach
+              enhances patient safety, reduces complications, and improves the
+              overall quality of care. In an era of value-based healthcare,
+              patient risk identification plays a pivotal role in optimizing
+              healthcare delivery and fostering better health outcomes for
+              individuals.
+            </p>
+            <h2 id="list-item-5">Contributors</h2>
+
+            <li>Rohan Kumar , PHD , (IIT PATNA)</li>
+            <li>Suchita Rathore , PHD , (IIT PATNA)</li>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="text-gray-600 body-font">
+      <div
+        class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col"
+      >
+        <div
+          class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left"
+        >
+          <a
+            class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
+          >
+          </a>
+        </div>
+        <div
+          class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center"
+        ></div>
+      </div>
+      <div class="bg-gray-100">
+        <div
+          class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row"
+        >
+          <span class="ml-3 text-indigo-500 text-xl"
+            >&copy ProjectNest 2023</span
+          >
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="script.js"></script>
+    <script>
+      document.getElementById("c1").addEventListener("click", function () {
+        window.location.href = "about.html";
+      });
+      document.getElementById("c2").addEventListener("click", function () {
+        window.location.href = "login.html";
+      });
+      document.getElementById("c3").addEventListener("click", function () {
+        window.location.href = "index.html";
+      });
+    </script>
+  </body>
+</html>
