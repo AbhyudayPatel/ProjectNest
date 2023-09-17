@@ -28,6 +28,7 @@ Clone the repository:
 ```shell
 git clone https://github.com/AbhyudayPatel/ProjectNest.git
 ```
+After cloning run "index.html"
 
 ## Contact
 
