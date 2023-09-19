@@ -18,8 +18,8 @@ This resource can also be tapped by industries, policymakers, and institutions f
 ## Technologies Used
 
 - Front-end: HTML, CSS, JavaScript ,Tailwind ,Bootstrap
-- Back-end: Javascript, Node.js
-- Database: MongoDB
+- Back-end: Javascript, Django
+- Database: SQLite
 
 ## Installation
 
@@ -28,7 +28,8 @@ Clone the repository:
 ```shell
 git clone https://github.com/AbhyudayPatel/ProjectNest.git
 ```
-After cloning run "index.html"
+After cloning,
+run "index.html"
 
 ## Contact
 
