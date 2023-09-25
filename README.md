@@ -1,7 +1,7 @@
 
 # ProjectNest
 
-ProjectNest is a centralized integrated repository for projects created for the SMART INDIA HACKAATHON 2023. It aims to showcase the innovative projects developed by students in higher educational institutes across India. On our website colleges will list the projects of their students and we will first check that the project is original through plagiarism software . we have different sections for what code used , components used , technology used , who have contributed and procedures , etc . on  this basis we will generate a summary using chatgpt API  and display each section with proper images . Anyone can access these projects ,they can read and download the data if needed and it will help in peer learning . this cross pollination of ideas will encourage students and researchers to think creatively and address complex real world challenges more effectively.
+ProjectNest is a centralized integrated repository for projects created for the SMART INDIA HACKATHON 2023. It aims to showcase the innovative projects developed by students in higher educational institutes across India. On our website colleges will list the projects of their students and we will first check that the project is original through plagiarism software . we have different sections for what code used , components used , technology used , who have contributed and procedures , etc . on  this basis we will generate a summary using chatgpt API  and display each section with proper images . Anyone can access these projects ,they can read and download the data if needed and it will help in peer learning . this cross pollination of ideas will encourage students and researchers to think creatively and address complex real world challenges more effectively.
 This resource can also be tapped by industries, policymakers, and institutions for research and development purposes.
 
 
@@ -29,7 +29,7 @@ Clone the repository:
 git clone https://github.com/AbhyudayPatel/ProjectNest.git
 ```
 After cloning,
-run "index.html"
+open "index.html"
 
 ## Contact
 
